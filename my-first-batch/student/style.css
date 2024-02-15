@@ -1,0 +1,289 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+header{
+    background-color: blue;
+    padding: 15px 0px;
+}
+
+.container{
+    width: 80%;
+    margin: 0px auto;
+}
+
+.header-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-wrapper h4{
+    font-size: 32px;
+    color: #ffffff;
+    /* width: 70%; */
+}
+
+.header-wrapper nav{
+    display: flex;
+    /* width: 30%; */
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.header-wrapper nav a{
+    color: #ffffff;
+}
+
+
+.banner{
+    padding: 100px 0px;
+}
+
+.banner-wrapper{
+    display: flex;
+    align-items: center;
+}
+
+.banner-wrapper .child-1,
+.banner-wrapper .child-2{
+    width: 50%;
+}
+
+.banner-wrapper .child-2 img{
+    width: 100%;
+}
+
+.banner-wrapper h1{
+    font-size: 48px;
+    font-weight: 600;
+
+}
+
+
+.banner-wrapper p{
+    color: #505050;
+    margin: 30px 0px;
+}
+
+.banner-btn {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.banner-btn a:first-child{
+    background-color: #FFA92C;
+    color: #ffffff;
+    padding: 15px 35px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 0px 0px #FFA92C;
+    transform: scale(1);
+    transition: all 0.3s;
+}
+
+.banner-btn a:first-child:hover{
+    box-shadow: 1px 1px 17px 2px #FFA92C;
+    transform: scale(1.1);
+}
+
+.banner-btn a:last-child{
+    font-weight: 600;
+    font-size: 18px;
+    color: #14121F;
+}
+
+.jobs-wrapper{
+    display: flex;
+    /* gap: 20px; */
+    justify-content: space-between;
+   
+    color: #ffffff;
+    flex-wrap: wrap;
+}
+
+.jobs-wrapper a{
+    color: #ffffff;
+   
+}
+
+.jobs-wrapper p{
+ margin: 15px 0px;
+}
+
+.jobs-wrapper img{
+    margin-bottom: 15px;
+}
+
+/* .jobs-box-1,
+.jobs-box-2,
+.jobs-box-3{
+    width: 33.3%;
+    background-color: green;
+    padding: 20px;
+} */
+
+.jobs{
+    padding: 80px 0px;
+}
+
+
+.jobs h2{
+    margin-bottom: 30px;
+    font-size: 35px;
+}
+
+.jobs-wrapper > div{
+    width: 32%;
+    padding: 20px;
+    border-radius: 20px;
+    
+}
+
+.jobs-wrapper > div:first-child{
+    background-color: #0C445C;
+}
+
+.jobs-wrapper > div:nth-child(2){
+    background-color: #5B2C98;
+}
+
+.jobs-wrapper > div:last-child{
+    background-color: #7F3219;
+}
+
+
+.jobs-wrapper > div > div:last-child{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.jobs-wrapper > div > div:last-child a{
+    border: 2px solid #ffffff;
+    padding: 8px;
+    border-radius: 12px;
+    background-color: transparent;
+    color: #ffffff;
+}
+
+.jobs-wrapper > div > div:last-child a:hover{
+    background-color: #FFA92C;
+    color: #333333;
+}
+
+
+@media only screen and (max-width: 700px) {
+    .header-wrapper {
+        flex-direction: column;
+    }
+    /* .header-wrapper{
+        display: block;
+        text-align: center;
+    } */
+}
+
+@media only screen and (max-width: 1100px) {
+    .banner h1{
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 998px){
+    .jobs-wrapper a{
+        font-size: 14px;
+    }
+
+    .jobs-wrapper>div:first-child{
+        width: 49%;
+    }
+
+    .jobs-wrapper>div:nth-child(2){
+        width: 49%;
+    }
+
+    .jobs-wrapper>div:last-child{
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .banner-wrapper{
+       flex-direction: column;
+       text-align: center;
+    }
+
+    .banner-wrapper .child-1, 
+    .banner-wrapper .child-2{
+        width: 100%;
+    }
+
+    .banner-btn{
+        justify-content: center;
+    }
+
+    /* .banner-btn a:first-child{
+        display: none;
+    } */
+}
+
+@media only screen and (max-width: 768px){
+    .jobs-wrapper > div{
+        width: 100% !important;
+    }
+
+    .jobs-wrapper > div:nth-child(2){
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 576px){
+    /* .banner-btn{
+        flex-direction: column;
+    } */
+
+    .banner-btn{
+        margin-bottom: 40px;
+    }
+
+    .banner-btn a{
+        font-size: 10px !important;
+    }
+}
+
+
+/* With class */
+/* .jobs-box-1{
+    background-color: #0C445C;
+}
+
+.jobs-box-2{
+    background-color: #5B2C98;
+}
+
+.jobs-box-3{
+    background-color: #7F3219;
+} */
+
+
+/* :nth-child() && :nth-of-type() */
+/* .jobs-wrapper > div > div:first-child{
+    background-color: green;
+}
+
+.jobs-wrapper > div > div:nth-of-type(1){
+    background-color: red;
+} */
+
