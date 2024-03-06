@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lissajous Curve</title>
+    <style>
+        canvas {
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="lissajousCanvas" width="400" height="400"></canvas>
+
+    <script>
+        const canvas = document.getElementById('lissajousCanvas');
+        const ctx = canvas.getContext('2d');
+
+        const centerX = canvas.width / 2;
+        const centerY = canvas.height / 2;
+
+        const amplitudeX = 100;
+        const frequencyX = 3;
+
+        const amplitudeY = 100;
+        const frequencyY = 2;
+
+        let time = 0;
+
+        function drawLissajousCurve() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            ctx.beginPath();
+
+            for (let t = 0; t <= time; t += 0.01) {
+                const x = centerX + amplitudeX * Math.sin(frequencyX * t);
+                const y = centerY + amplitudeY * Math.sin(frequencyY * t);
+
+                ctx.arc(x, y, 2, 0, 2 * Math.PI);
+            }
+
+            ctx.fillStyle = 'blue';
+            ctx.fill();
+
+            time += 0.09;
+
+            requestAnimationFrame(drawLissajousCurve);
+        }
+
+        drawLissajousCurve();
+    </script>
+</body>
+</html>

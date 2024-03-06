@@ -1,0 +1,177 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* h1{
+        color: blue;
+    } */
+
+    /* .heading-3{
+        color: green;
+    }
+
+    .heading-4{
+        color: orangered;
+    }
+
+#title-1{
+    color: blueviolet;
+}
+
+
+#title-2{
+    color: rgba(11, 0, 142, 0.5);
+} */
+
+body{
+    background-color: #e1e1e1;
+    /* color: red; */
+    /* font-size: 16px; */
+    font-size: 18px;
+    font-weight: normal;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    line-height: 1.6;
+}
+
+.box{
+    background-color: darkgrey;
+    /* color: green; */
+    /* Inner spacing */
+    padding: 50px;
+    border: 5px solid blue;
+
+    /* Outer Spacing */
+    /* margin: 50px; */
+
+    /* padding-left: 50px;
+    padding-right: 100px;
+    padding-top: 150px;
+    padding-bottom: 200px; */
+
+    /* Two parameters 1st --> Top and Bottom
+    2nd --> left and right*/
+    /* padding: 50px 200px; */
+
+    /* Four Parameters 1st --> Top 2nd --> right 3rd --> bottom 4th --> left */
+    /* padding: 50px 100px 150px 200px; */
+}
+
+.box-2{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    padding: 50px;
+}
+
+.box-3{
+    width: 200px;
+    height: 200px;
+    background-color: orangered;
+    padding: 50px;
+    border: 5px solid green;
+}
+
+.box-border{
+    border: 3px solid green;
+}
+
+
+.box-parent{
+    width: 300px;
+    height: 300px;
+    background-color: slategrey;
+    /* Static is the default position to all the elemenets */
+    /* position: static; */
+    /* position: relative; */
+    top: 0px;
+    left: 0px;
+}
+
+.box-child{
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    /* position: absolute; */
+    position: fixed;
+    top: 50px;
+    left: 50px;
+}
+
+.para::first-letter{
+    font-size: 50px;
+    color: blue;
+    margin-bottom: 50px;
+}
+
+button{
+    padding: 30px 80px;
+    background-color: orangered;
+    color: #ffffff;
+    border: none;
+    margin: 0px 0px 0px 25px;
+    transition: background-color 1s 1s;
+}
+
+
+button:hover{
+    background-color: blue;
+}
+/* .noob {
+    margin-top: 100px;
+} */
+
+/* .noob div{
+    background-color: green;
+    width: 100px;
+    height: 100px;
+}
+
+.noob-2{
+    background-color: yellow !important;
+}
+
+.noob-3{
+    background-color: grey !important;
+} */
+
+.pro{
+    margin-top: 100px;
+}
+
+/* .pro div{
+    background-color: green;
+    width: 100px;
+    height: 100px;
+}
+
+.pro div:nth-child(1){
+    background-color: yellow;
+}
+
+.pro div:nth-child(2){
+    background-color: grey;
+}
+
+
+.pro div:last-child{
+    background-color: blue;
+} */
+
+.pro > div{
+    color: blue;
+}
+
+.next-level-pro ul li:first-child{
+    color: blue;
+}
+
+.next-level-pro ul li:nth-child(2){
+    color: green;
+}
+
+.next-level-pro ul li:last-child{
+    color: orangered;
+}
