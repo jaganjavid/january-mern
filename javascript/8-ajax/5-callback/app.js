@@ -35,12 +35,10 @@ const posts = [
 // Async
 
 
-function createPost(post, callback, end){
+function createPost(post, callback){
     setTimeout(function(){
         posts.push(post);
         callback();
-        end();
-        console.log(1);
     }, 2000);
 };
 
@@ -54,16 +52,12 @@ function getPosts(){
 
         document.body.innerHTML = output;
 
-        console.log(2)
 
     }, 1000);
 };
 
-function end(){
-    console.log(3);
-}
 
-createPost({title:"post 3", body:"This is post three"},getPosts, end);
+createPost({title:"post 3", body:"This is post three"}, getPosts);
 
 
 
